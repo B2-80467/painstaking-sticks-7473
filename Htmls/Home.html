@@ -14,33 +14,142 @@
         box-sizing: border-box;
       }
 
+      
+      /* -------Not a nav bar---- */
+
       #nav{
+            height: 10%;
+            width: 100%;
+            /* border: 4px solid red; */
+            background-color: #00253c;
+        }
+        #insidex{
+            height: 50%;
+            width: 80%;
+            /* border: 4px solid green; */
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        #insidex>div:nth-child(1){
+            height: 50%;
+            width: 35%;
+            /* border: 4px solid blue; */
+            display: flex;
+            justify-content: space-between;
+        }
+        #insidex>div:nth-child(2){
+            height: 50%;
+            width: 50%;
+            /* border: 4px solid blue; */
+        }
+        #insidex ul,#inside img{
+            float: left;
+            color: white;
+            cursor: pointer;
+        }
+        #insidex ul:hover{
+            color: green
+            
+        }
+
+        /* ______nav bar ended________________ */
+
+
+         
+
+      #cont{
+        height: 400px;
+        width: 99.5%;
+        /* border: 4px solid red; */
+        margin-top: 0%;
+        position: relative;
+        
+      }
+      #cont img{
+        width: 100%;
+        height: 100%;
+      }
+      #inside{
+        height: 80%;
+        width: 80%;
+        /* border: 4px solid blue; */
+        margin: auto;
+        margin-top: 35px;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        
+        
+        bottom: 10%;
+        left: 10%;
+        
+        /* margin-top: 100%; */
+      }
+      #inside1{
         height: 30%;
         width: 80%;
-        /* border: 4px solid red; */
+        /* border: 4px solid brown; */
         margin: auto;
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        background-color: #00253c;
+     display: flex;
+      }
+      #inside1 ul{
+        /* float: left; */
+        
+        margin-top: 2%;
+        font-size: 30px;
+        cursor: pointer;
+        
+        
+      }
+      #inside1 ul:hover{
+        color: green;
+      }
+      #makingbox2{
+        height: 50%;
+        width: 80%;
+        /* border: 4px solid gold; */
+        display: flex;
+        /* grid-template-columns: repeat(4,1fr); */
+        margin: auto;
         justify-content: space-between;
+       
+      }
+      #strech{
+        width: 60vh;
+      }
+      #makingbox2 input{
+         height: 50px;
+          
+      }
+      .width{
+        width: 50px;
+      }
+      #search{
+        height: 50px;
+        width: 100px;
+        text-align: center;
+        display: block;
+        margin: auto;
+        background-color: red;
+      }
 
-      }
-      #nav>div:nth-child(1){
-        height: 100%;
-        width: 90%;
-        /* border: 4px solid green; */
-      }
-      #nav>div:nth-child(2){
-        height: 100%;
-        width: 100%;
-        /* border: 4px solid blue; */
-        
-        
-      }
-      #nav a{
-        color: white;
-        
-      }
+        #search:hover{
+          cursor: pointer;
+        }
+
+
+
+
+
+
+
+
+
+
+
+        /* ___________________________search part__________________ */
 
       #container{
         width: 80%;
@@ -48,7 +157,7 @@
         margin: auto;
         display: grid;
         grid-template-columns: repeat(3,1fr);
-        margin-top: 30%;
+        margin-top: 5%;
         /* justify-content: space-between; */
       
 
@@ -406,19 +515,63 @@ width: 80%;
 </head>
 <body>
 
+  
   <div id="nav">
-    <div>
-      <img src="https://www.orbitz.com/_dms/header/logo.svg?locale=en_US&siteid=70201&2" alt="error">
-      <a href="">More travel</a>
+    <div id="insidex">
+        <div>
+            <img src="https://www.orbitz.com/_dms/header/logo.svg?locale=en_US&siteid=70201&2" alt="error">
+            <ul>More travel</ul>
+        </div>
+
+        <div>
+            <ul>Espanol</ul>
+            <ul>List Your Property</ul>
+            <ul>Support</ul>
+            <ul>Trips</ul>
+            <ul> <a href="./sign in.html" target="_blank">Sign in</a></ul>
+        </div>
     </div>
-    <div>
-      <a href="">Espanol</a>
-      <a href="">List your property</a>
-      <a href="">Support</a>
-      <a href="">Trips</a>
-      <a href="./sign in.html" target="_blank">Sign in</a>
-    </div>
+</div>
+
+<!-- ______________________________________seach part -->
+
+
+
+ 
+<div id="cont">
+  <img src="https://forever.travel-assets.com/flex/flexmanager/images/2021/11/01/ORB_Storefront_6_imgB_1400x600_20211028.jpg?impolicy=fcrop&w=900&h=225&q=mediumHigh" alt="">
+  <div id="inside">
+      <div id="inside1">
+          <ul>stay</ul>
+          <ul>Flights</ul>
+          <ul>Cars</ul>
+          <ul>Packages</ul>
+          <ul>Things to do</ul>
+          <ul>Cruises</ul>
+      </div>
+      <hr/>
+      <div id="makingbox2">
+          <div><input type="text" placeholder="going to" id="strech"></div>
+          <div><input type="date" placeholder="checkin" class="width"></div>
+          <div><input type="date" placeholder="check out" class="width"></div>
+          <div><input type="number" placeholder="Travelers"></div>
+      </div>
+      <button id="search" > Search</button>
   </div>
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- ___________________________________________________________search part ending________ -->
+  
     <div id="container">
                 <div>
                     <img src="https://forever.travel-assets.com/flex/flexmanager/images/2022/02/09/ORB_BrandPromise_TravelAsYouAre_imgB_840x473_20220207.jpg?impolicy=fcrop&w=900&h=386&q=mediumHigh" alt="error">
@@ -629,4 +782,17 @@ width: 80%;
     <p class="margin">    Orbitz, Orbitz.com, and the Orbitz logo are trademarks or registered trademarks of Orbitz, LLC. CST# 2083930-50.</p>
 </body>
 <!-- <script src="./Home.js"></script> -->
+<script>
+        let userInput = document.querySelector("#strech")
+        
+
+  let searchButton= document.querySelector("#search")
+    searchButton.addEventListener("click",() =>{
+             if( typeof(userInput.value) === "string"){
+              location.href= "./Hotels.html"
+              
+             }
+            
+    })
+</script>
 </html>
