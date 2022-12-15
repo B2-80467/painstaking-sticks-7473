@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #form{
+            height: 40%;
+            width: 50%;
+            border: 4px solid red;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            margin-top: 10%;
+            text-align: center;
+            
+        }
+        .inp{
+            width: 50%;
+            height: 50%;
+           display: block;
+           margin: auto;
+           margin-top:5% ;
+           font-size: large;
+        }
+        #links{
+            height: 10%;
+            width:50% ;
+            /* border: 4px solid yellow; */
+            margin: auto;
+    
+        }
+        #links a{
+            color: green;
+            display: block;
+            margin: auto;
+        }
+        #links>div{
+            height: 50%;
+            width: 50%;
+            /* border: 4px solid blue; */
+            margin-top: 10%;
+            text-align: center;
+            margin-left: 25%;
+        }
+      
+    </style>
+</head>
+<body>
+    <form action="" id="form">
+        <h2>sign in</h2>
+        <input type="email" placeholder="please enter your email" class="inp">
+        <input type="password" placeholder="please enter your password" class="inp">
+        <input type="checkbox" value="Keep me signed in">
+        <p>Selecting this checkbox will keep you signed into your account on this device until you sign out. Do not select this on shared devices.</p>
+        <P>By signing in, I agree to the Orbitz Terms and Conditions, Privacy Statement and Orbitz Rewards Terms and Conditions.</P>
+        <input type="submit" value="Sign in" class="inp">
+    </form>
+    <div id="links">
+      <div>
+        <a href="">
+            Forgot password?
+            </a>
+      </div>
+       <div>
+        <a href="./Sign Up.html">Don't have an account? Create one</a>
+       </div>
+           
+    </div>
+   
+</body>
+</html>

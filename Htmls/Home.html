@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./Home.css"> -->
+    <style>
+      body{
+        font-family: sans-serif;
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+      }
+
+      #nav{
+        height: 30%;
+        width: 80%;
+        /* border: 4px solid red; */
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        background-color: #00253c;
+        justify-content: space-between;
+
+      }
+      #nav>div:nth-child(1){
+        height: 100%;
+        width: 90%;
+        /* border: 4px solid green; */
+      }
+      #nav>div:nth-child(2){
+        height: 100%;
+        width: 100%;
+        /* border: 4px solid blue; */
+        
+        
+      }
+      #nav a{
+        color: white;
+        
+      }
+
+      #container{
+        width: 80%;
+        /* border: 3px solid green; */
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        margin-top: 30%;
+        /* justify-content: space-between; */
+      
+
+      }
+      #container> div{
+        height: 100%;
+        width:100% ;
+        /* border: 3px solid red; */
+        /* box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset; */
+       
+      }
+
+       #container img{
+        height: 80%;
+        width: 100%;
+       
+      } 
+
+      /* -------------------------------- */
+
+      #second{
+        margin-left: 10%;
+        margin-top: 2%;
+      }
+   #secondTop{
+
+      /* height: 40%; */
+      width: 80%;
+      /* border: 4px solid yellow; */
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 2%;
+    
+   }
+
+   #secondTop>div{
+    width: 100%;
+    height: 100%;
+    /* border: 4px solid blue; */
+   }
+   #secondTop img{
+    height: 100%;
+    width: 100%;
+   }
+
+ #third{
+    width: 80%;
+    
+      margin: auto;
+      /* display: grid;
+      grid-template-columns: repeat(1,1fr); */
+      margin-top: 5%;
+      height: 70%;
+
+ }
+#third div{
+    width: 100%;
+    height: 70%;
+}
+#third img{
+    width: 100%;
+    height: 100%;
+
+}
+
+#middlepart{
+
+    margin-left: 10%;
+        margin-top: 2%;
+}
+
+#threeStrips{
+
+width: 80%;
+margin: auto;
+/* border: 4px solid red; */
+display: grid;
+grid-template-columns: repeat(3,1fr);
+/* grid-template-rows: 100px; */
+
+  
+}
+#threeStrips div{
+  height: 30%;
+  width: 90%;
+  /* border: 4px solid green; */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  gap: 10px;
+   
+}
+#threeStrips img{
+  height: 50%;
+  width: 50%;
+  /* border: 4px solid yellow; */
+  float: right;
+  justify-content: end;
+  
+}
+#threeStrips h3,#threeStrips p {
+  font-size: x-small;
+}
+/* #threeStrips h2 ,#threeStrips p{
+  
+} */
+/* 
+#Travel{
+  margin-left: 10%;
+        margin-top: 2%;
+        margin-bottom: 20%;
+} */
+#travel{
+  margin-left: 10%;
+        margin-top: 2%;
+}
+#parks{
+  height: 30%;
+  width: 80%;
+  border: 4px solid red;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 2%;
+}
+
+#parks div{
+  height: 100%;
+  width: 100%;
+  border: 4px solid yellow;
+  margin: auto;
+  position: relative;
+}
+#parks img{
+  width: 100%;
+  height: 100%;
+}
+#parks button{
+  position: absolute;
+  top: 160%;
+  left: 25%;
+  ;
+  /* transform: translate(-100%, -100%);
+  -ms-transform: translate(-100%, -100%);
+  /* background-color: #555; */
+  /* color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center; */ */
+}
+
+
+#qrcode{
+
+  height: 30%;
+  width: 80%;
+  /* border: 4px solid black; */
+  display: flex;
+  /* grid-template-columns: repeat(3,1fr); */
+  margin: auto;
+  margin-top: 10%;
+}
+#qrcode>div:nth-child(1){
+  /* border: 3px solid red; */
+  height: 100%;
+  width: 100%;
+}
+#qrcode>div:nth-child(1)>img{
+  height:100%;
+  width: 100%;
+}
+#qrcode>div:nth-child(2){
+  /* border: 3px solid green; */
+  height: 50%;
+  width: 50%;
+}
+
+#qrcode>div:nth-child(2)>img{
+  height:100%;
+  width: 50%;
+}
+#qrcode button{
+  background-color: red
+}
+
+#last{
+  margin-left: 10%;
+        margin-top: 2%;
+}
+
+#firstSlit{
+  height: 40%;
+  width: 80%;
+  /* border: 4px solid red; */
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2,1fr);
+  gap: 2%;
+}
+#firstSlit div{
+  
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  
+  
+}
+#firstSlit h2{
+  display: -moz-grid-line;
+}
+#expedia{
+  margin-left: 10%;
+        margin-top: 2%;
+
+}
+
+#fotter{
+  height: 40%;
+  width: 80%;
+  /* border: 4px solid red; */
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+#fotter ul{
+  color: green;
+}
+#fotter h3{
+  margin-left: 12%;
+}
+
+hr{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.margin{
+  margin-left: 10%;
+        margin-top: 2%;
+}
+ /* ----------------------------------------------------------------------------------------------------------------------------------------- */
+
+ /* medium media query */
+      @media screen and (min-width:768px) and (max-width: 1024px) {
+         
+        #container{
+        width: 80%;
+        /* border: 3px solid green; */
+        /* margin: auto; */
+        display: flex;
+        margin-top: 30%;
+        flex-direction: column;
+        justify-content: space-between;
+      
+
+      }
+
+          /* -------------------------------- */
+   #secondTop{
+
+      /* height: 40%; */
+      width: 80%;
+      /* border: 4px solid yellow; */
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+      gap: 2%;
+   }
+
+
+    
+#threeStrips{
+  height: 40%;
+width: 80%;
+margin: auto;
+border: 4px solid red;
+display: grid;
+grid-template-rows: repeat(3,1fr);
+justify-content: space-between;
+  
+}
+    
+
+#firstSlit{
+  height: 40%;
+  width: 80%;
+  /* border: 4px solid red; */
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-template-rows: repeat(6,1fr);
+  gap: 2%;
+}
+   
+ 
+      }
+
+
+      @media screen and (min-width:320px) and (max-width:767px) {
+       
+        #container{
+        width: 80%;
+        /* border: 3px solid green; */
+        margin: auto;
+        display: flex;
+        margin-top: 30%;
+        flex-direction: column;
+        justify-content: space-around;
+      
+
+      }
+        
+      #secondTop{
+
+      /* height: 40%; */
+      width: 80%;
+      /* border: 4px solid yellow; */
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+      gap: 2%;
+   }
+   
+      
+#threeStrips{
+
+/* height: 40%; */
+width: 80%;
+    /* border: 4px solid yellow; */
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+  
+    gap: 2%;  
+    
+}
+  
+  
+#firstSlit{
+  height: 40%;
+  width: 80%;
+  /* border: 4px solid red; */
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-template-rows: repeat(6,1fr);
+  gap: 2%;
+}
+      }
+
+    </style>
+</head>
+<body>
+
+  <div id="nav">
+    <div>
+      <img src="https://www.orbitz.com/_dms/header/logo.svg?locale=en_US&siteid=70201&2" alt="error">
+      <a href="">More travel</a>
+    </div>
+    <div>
+      <a href="">Espanol</a>
+      <a href="">List your property</a>
+      <a href="">Support</a>
+      <a href="">Trips</a>
+      <a href="./sign in.html" target="_blank">Sign in</a>
+    </div>
+  </div>
+    <div id="container">
+                <div>
+                    <img src="https://forever.travel-assets.com/flex/flexmanager/images/2022/02/09/ORB_BrandPromise_TravelAsYouAre_imgB_840x473_20220207.jpg?impolicy=fcrop&w=900&h=386&q=mediumHigh" alt="error">
+                </div>
+                <div>
+                    <img src="https://forever.travel-assets.com/flex/flexmanager/images/2022/02/09/ORB_BrandPromise_Rewards_imgB_840x473_20220207.jpg?impolicy=fcrop&w=900&h=386&q=mediumHigh" alt="error">
+                </div>
+                <div>
+                    <img src="https://forever.travel-assets.com/flex/flexmanager/images/2022/02/09/ORB_BrandPromise_InsiderPrices_imgB_840x473_20220207.jpg?impolicy=fcrop&w=900&h=386&q=mediumHigh" alt="error">
+                </div>
+    </div>
+    
+    <h1 id="second">Featured offers</h1>
+    <div id="secondTop">
+           <div>
+            <img src="https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_LastMinute_imgB_900x600_20211101.jpg?impolicy=fcrop&w=600&h=400&q=medium" alt="error">
+           </div>
+           <div>
+            <img src="https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_AllInclusive_imgB_900x600_20211101.jpg?impolicy=fcrop&w=600&h=400&q=medium" alt="error">
+           </div>
+           <div>
+            <img src="https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_MOD_imgB_900x600_20211101.jpg?impolicy=fcrop&w=600&h=400&q=medium" alt="error">
+           </div>
+           <div>
+            <img src="https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_JetAndReset_imgB_900x600_20211101.jpg?impolicy=fcrop&w=600&h=400&q=medium" alt="">
+           </div>
+    </div>
+
+    
+   <div id="third">
+    <div>
+        <img src="https://forever.travel-assets.com/flex/flexmanager/images/2020/12/03/ORB_Storefront_Deals_2740x1484-V1.jpg" alt="">
+    </div>
+   </div>
+    
+   <h1 id="middlepart">Here to help keep you on the move</h1>
+   <div id="threeStrips">
+
+    <div>
+        <img src="https://forever.travel-assets.com/flex/flexmanager/images/2021/04/08/icon__mode_edit.svg" alt="error">
+        <h3>Change or cancel a trip</h3>
+        <p>Make updates to your intieray or cancel a booking</p>
+    </div>
+
+    <div>
+        <img src="https://forever.travel-assets.com/flex/flexmanager/images/2021/04/08/icon__monetization_on.svg" alt="error">
+        <h3>Use a credit or coupon </h3>
+        <p> Apply a coupon code or credit to a new trip</p>
+    </div>
+
+    <div>
+        <img src="https://forever.travel-assets.com/flex/flexmanager/images/2021/04/08/icon__chat.svg" alt="error">
+        <h3>Track your refund</h3>
+        <p> Check the status of a refund current in progress</p>
+    </div>
+
+    <!-- <h1 id="Travel">Traveling tips</h1>
+
+    <div id="park">
+      <div>
+        <img src="https://forever.travel-assets.com/flex/flexmanager/images/2021/11/18/ORB_Blog_NationalParks_imgB_1199x399_20211117.jpg" alt="error">
+        <h2>National parks</h2>
+        <p>There's plenty to keep you busy</p>
+        <button>Learn more</button>
+      </div>
+
+      <div>
+        <img src="https://forever.travel-assets.com/flex/flexmanager/images/2021/11/18/ORB_Blog_RoadTrips_imgB_1199x399_20211117.jpg" alt="error">
+
+        <h2>The perfect road trip</h2>
+        <button>Read on</button>
+      </div>
+    </div> -->
+
+   </div>
+   
+   <h3 id="travel">Traveling tips</h3>
+     <div id="parks">
+        <div>
+          <img src="https://forever.travel-assets.com/flex/flexmanager/images/2021/11/18/ORB_Blog_NationalParks_imgB_1199x399_20211117.jpg" alt="error">
+          <h2>National Parks</h2>
+          <p>There's plenty to keep you busy</p>
+          <button>Learn more</button>
+        </div>
+
+
+        <div>
+          <img src="https://forever.travel-assets.com/flex/flexmanager/images/2021/11/18/ORB_Blog_RoadTrips_imgB_1199x399_20211117.jpg" alt="error">
+          <h2>The perfect road trip</h2>
+          <p>Find an adventure for every season</p>
+          <button>Read on</button>
+        </div>
+
+       
+     </div>
+     <div id="qrcode">
+      <div>
+        <img src="https://a.travel-assets.com/mad-service/footer/marquee/ORB_App_Footer_v1.jpg" alt="error">
+      </div>
+      <div>
+        <h1>Rewards are waiting for you in the Orbitz app</h1>
+        <ul>
+          <li>
+            Earn 4% back when you book your hotel in app, vs. 3% on site</li>
+            <li>Get flight status and gate number notifications</li>
+            <li>
+              Have questions about your stay? Message your hotel right in the app</li>
+        </ul>
+        <input type="number" placeholder="type the contry code">
+        <input type="number" placeholder="Please enter the phone number">
+        <button>Get the app</button>
+   
+        <div>
+          
+        </div>
+        
+          <img src="https://a.travel-assets.com/mad-service/qr-code/portfolio_app_landing/qr_app_landing_footer_orbitz.png" alt="error">
+         
+        
+      </div>
+       
+    </div>
+
+    <h1 id="last"> More destinations</h1>
+
+    <div id="firstSlit">
+      <div>
+        <h2>Destination deals</h2>
+      </div>
+      <div>
+        <h2>Top hotel beach destinations</h2>
+      </div>
+      <div>
+       <h2>
+        Top hotel city destinations
+       </h2>
+      </div>
+
+      <div>
+  <h2>Top vacation destinations</h2>
+      </div>
+      <div>
+
+        <h2>Top flight destinations</h2>
+      </div>
+      <div>
+        <h2>Top car rental destinations in America</h2>
+      </div>
+    </div>
+
+    <div id="expedia">
+      <img src="https://a.travel-assets.com/globalcontrols-service/content/f285fb631b0a976202ef57611c7050e9ef5ca51a/images/EG_Wordmark_blue_RGB.svg" alt="error">
+    </div>
+
+    <div id="fotter">
+      <div>
+        <h3>Company</h3>
+        <ul>About</ul>
+        <ul>Jobs</ul>
+        <ul>List your property</ul>
+        <ul>Partnerships</ul>
+        <ul>Newsroom</ul>
+        <ul>investor Relations</ul>
+        <ul>Sit Map</ul>
+        <ul>Orbitz Rewards</ul>
+        <ul> Advertusubg</ul>
+      </div>
+
+      <div>
+        <h3>Explore</h3>
+        <ul>Hotels in United States</ul>
+        <ul> Vacation Rentals in United States</ul>
+        <ul>Car Rentals in United States</ul>
+        <ul> Domestic Flights</ul>
+        <ul> Vacation Packages in United States</ul>
+        <ul>Oritz Reviews</ul>
+        <ul>Orbitz Coupons</ul>
+        <ul>LGBTQ Travel</ul>
+        <ul>Unique Accommodations</ul>
+        <ul>Travel Blog</ul>
+      </div>
+
+      <div>
+        <h3>Policies</h3>
+        <ul>Privacy Policy</ul>
+        <ul>Terms of USe</ul>
+        <ul>Vrbo terms and conditions</ul>
+        <ul>Orbitz Rewards Terms</ul>
+        <ul>Do not sell my personal information</ul>
+      </div>
+
+      <div>
+        <h3>Help</h3>
+        <ul>Support</ul>
+        <ul>Cancel Your hotel or vacation rental booking</ul>
+        <ul>Cancel your flight</ul>
+        <ul>Refund tumelines,policies & processes</ul>
+        <ul>USe an Orbits Coupon</ul>
+      </div>
+    </div>
+
+   <hr/>
+
+   <p class="margin">
+    © 2022 Orbitz, LLC, an Expedia Group Company. All rights reserved.
+
+    </p>
+    <p class="margin">    Orbitz, Orbitz.com, and the Orbitz logo are trademarks or registered trademarks of Orbitz, LLC. CST# 2083930-50.</p>
+</body>
+<!-- <script src="./Home.js"></script> -->
+</html>

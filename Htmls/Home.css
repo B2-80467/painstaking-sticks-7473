@@ -1,0 +1,14 @@
+
+        #container{
+            height: 100%;
+            width: 100%;
+            border: 3px solid red;
+
+        }
+        #nav{
+                display: flex;
+
+                justify-content: space-between;
+                background-color: #00253c;
+                color: white;
+        }
