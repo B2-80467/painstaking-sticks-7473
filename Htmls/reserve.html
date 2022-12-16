@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #nav{
+            height: 10%;
+            width: 100%;
+            /* border: 4px solid red; */
+            background-color: #00253c;
+        }
+        #insidex{
+            height: 50%;
+            width: 80%;
+            /* border: 4px solid green; */
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        #insidex>div:nth-child(1){
+            height: 50%;
+            width: 35%;
+            /* border: 4px solid blue; */
+            display: flex;
+            justify-content: space-between;
+        }
+        #insidex>div:nth-child(2){
+            height: 50%;
+            width: 50%;
+            /* border: 4px solid blue; */
+        }
+        #insidex ul,#inside img{
+            float: left;
+            color: white;
+            cursor: pointer;
+        }
+        #insidex ul:hover{
+            color: green
+            
+        }
+        #formsection{
+            height: 10vh;
+            width: 50%;
+            /* border: 4px solid red; */
+            margin: auto;
+            margin-top: 2%;
+            /* margin-left: 40%; */
+            
+            
+            
+        }
+        #formsection input{
+            height: 5vh;
+           margin-top: 2%;
+           margin-left: 2%;
+         
+           
+        }
+
+        #container{
+            height: 50%;
+            width: 60%;
+            border: 4px solid red;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            margin-top: 15%;
+        }
+        #topcontaner{
+            width: 90%;
+            height: 100%;
+            border: 4px solid blue;
+        }
+        #topcontaner img{
+            height: 40%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="nav">
+        <div id="insidex">
+            <div>
+                <img src="https://www.orbitz.com/_dms/header/logo.svg?locale=en_US&siteid=70201&2" alt="error">
+                <ul>More travel</ul>
+            </div>
+    
+            <div>
+                <ul>Espanol</ul>
+                <ul>List Your Property</ul>
+                <ul>Support</ul>
+                <ul>Trips</ul>
+                <ul> <a href="./sign in.html" target="_blank" id="ancher">Sign in</a></ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="formsection">
+        <form action="">
+            <input type="text" id="name" placeholder="name of place">
+            <input type="date" class="date">
+            <input type="date" class="date">
+            <input type="number" placeholder="number of rooms">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+
+    <div id="container"></div>
+</body>
+<script>
+
+roomData= JSON.parse(localStorage.getItem("roomData"))||[]
+     console.log(roomData)
+     displayData(roomData)
+     function displayData(data){
+        let cantainer= document.getElementById("container")
+    // let Button = document.querySelector("#showData")
+    
+    cantainer.innerHTML=null;
+        console.log("i am samir");
+        data.forEach((element,index)=>{
+            let card=document.createElement("div")
+            card.setAttribute("id","topcontaner")
+            card.setAttribute("href","./rooms.html")
+    
+            
+            
+             let image=document.createElement("img")
+             image.setAttribute("src",element.image)
+            
+        
+               
+           
+             let roomName= document.createElement("h2")
+             roomName.textContent=element.roomName;
+        
+    
+             let size = document.createElement("h4")
+             size.textContent = element.size;
+        
+            
+            let price = document.createElement("h4")
+             price.textContent = element.price
+            //  let button = document.createElement("button")
+            
+            // topContaner.addEventListener("click",()=>{
+            //     // data.filter((element),=>{
+            //           let roomData= JSON.parse(localStorage.getItem("roomData"))||[]
+            //     // })
+            //     for(let i=0; i<data[index].rooms.length; i++){
+            //         console.log(data[index].rooms.length)
+            //         roomData.push(data[index].rooms[i])
+            //         if(roomData.length == 3){
+            //             break;
+            //         }
+            //         // console.log(data[index].rooms[i])
+            //     }
+            //             localStorage.setItem("roomData",JSON.stringify(roomData))
+            //                  console.log(roomData)
+            //     location.href= "./addtocart.html"
+            //     // console.log(data[index].rooms[index+1])
+            // })
+        
+            
+            card.append(image,roomName,size,price)
+            cantainer.append(card)
+        })
+        
+    
+}
+</script>
+</html>
