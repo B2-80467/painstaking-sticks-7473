@@ -42,12 +42,13 @@
             color: green
             
         }
-        /* #formsection{
+        #formsection{
             height: 10vh;
-            width: 80%;
-            border: 4px solid red;
+            width: 50%;
+            /* border: 4px solid red; */
             margin: auto;
             margin-top: 2%;
+            /* margin-left: 40%; */
             
             
             
@@ -55,9 +56,53 @@
         #formsection input{
             height: 5vh;
            margin-top: 2%;
+           margin-left: 2%;
          
            
-        } */
+        }
+
+
+        /* --------------------bottom section--------- */
+
+
+
+        #continer{
+        width: 60%;
+        /* border: 4px solid red; */
+       
+        /* flex-direction: column; */
+        /* margin: auto; */
+        margin-left: 30%;
+      }
+      #topcontaner{
+        height: 35%;
+        width:80% ;
+        /* border: 4px solid black; */
+        display: flex;
+        cursor: pointer;
+        margin-left: -5%;
+      }
+      #imageDiv{
+        height: 200px;
+        width: 35%;
+        /* border: 4px solid yellow; */
+        margin-top: 2%;
+      }
+      #imageDiv>img{
+        height: 100%;
+        width: 100%;
+      }
+  #content{
+    height: 200px;
+    width:100% ;
+    /* border: 4px solid blue; */
+    margin-top: 2%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  #ancher{
+  text-decoration: none;
+  color: white;
+}
     </style>
 </head>
 <body>
@@ -74,11 +119,11 @@
             <ul>List Your Property</ul>
             <ul>Support</ul>
             <ul>Trips</ul>
-            <ul> <a href="./sign in.html" target="_blank">Sign in</a></ul>
+            <ul> <a href="./sign in.html" target="_blank" id="ancher">Sign in</a></ul>
         </div>
     </div>
 </div>
-<!-- 
+
 <div id="formsection">
     <form action="">
         <input type="text" id="name" placeholder="name of place">
@@ -87,6 +132,343 @@
         <input type="number" placeholder="number of rooms">
         <input type="submit" value="Search">
     </form>
-</div> -->
+</div>
+<div id="continer">
 </body>
+<script>
+  
+   locations = JSON.parse(localStorage.getItem("location"))||[]
+  console.log(locations)
+
+  let HotelsData=[
+        {
+            name:"Doubletree-By-Hilton-Pune-Chinchwad",
+            location:"pune",
+            rating:9.0/10,
+            review:"Wonderfule",
+            price:"$67",
+            image:"https://a.travel-assets.com/media/meso_cm/PAPI/Images/hotels/7000000/6160000/6152800/6152720/99c1be83_b.jpg",
+            rooms:[{
+                roomName:"Double Room,1 Queen Bed",
+                size:"323 sq ft",
+                image:"https://images.trvl-media.com/hotels/7000000/6160000/6152800/6152720/efa121de.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium",
+                price:"$67",
+            },{
+                roomName:"Double Room, 2 Twin BedsQueen Bed",
+                size:"323 sq ft",
+                image:"https://images.trvl-media.com/hotels/7000000/6160000/6152800/6152720/a0327df7.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium",
+                price:"$67", 
+            }, {
+                roomName:"Executive Double Room, 1 King  Bed",
+                size:"323 sq ft",
+                image:"https://images.trvl-media.com/hotels/7000000/6160000/6152800/6152720/a0327df7.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium",
+                price:"$115",  
+            }],
+        }, {
+
+
+            name:"JW Marriott Mumbai Sahar",
+            location:"mumbai",
+            rating:9.0/10,
+            review:"Wonderfule",
+            price:"$172",
+            image:"https://images.trvl-media.com/hotels/10000000/9790000/9784600/9784580/5f07eb8c.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            rooms:[
+                {
+                roomName:"Double Room,1 Queen Bed",
+                size:"323 sq ft",
+                image:"https://images.trvl-media.com/hotels/7000000/6160000/6152800/6152720/efa121de.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium",
+                price:"$67",
+            },{
+                roomName:"Double Room, 2 Twin BedsQueen Bed",
+                size:"323 sq ft",
+                image:"https://images.trvl-media.com/hotels/7000000/6160000/6152800/6152720/a0327df7.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium",
+                price:"$67", 
+            }, {
+                roomName:"Executive Double Room, 1 King  Bed",
+                size:"323 sq ft",
+                image:"https://images.trvl-media.com/hotels/7000000/6160000/6152800/6152720/a0327df7.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium",
+                price:"$115",  
+            }
+            ],
+        },{
+            name:"Hilton Mumbai International Airport",
+            location:"Mumbai",
+            rating:"8.4/10",
+            review:"very Good",
+            price:"$143",
+            image:"https://a.travel-assets.com/media/meso_cm/PAPI/Images/hotels/1000000/540000/533200/533142/33a20a51_b.jpg",
+            rooms:[{
+                roomName:"Double Room,1 Queen Bed",
+                size:"388 sq ft",
+                image:"https://images.trvl-media.com/hotels/1000000/540000/533200/533142/408d925d.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium",
+                price:"$143",
+            },{
+                roomName:"Hilton , Executive Room , Business Lounge Access, City view",
+                size:"431 sq ft",
+                image:"https://images.trvl-media.com/hotels/1000000/540000/533200/533142/36d13ab4.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium",
+                price:"$188", 
+            }, {
+                roomName:"Room, 2 Twin Beds, Pool View",
+                size:"388 sq ft",
+                image:"https://images.trvl-media.com/hotels/7000000/6160000/6152800/6152720/a0327df7.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium",
+                price:"$143",  
+            }],
+        },{
+            name:"The Taj Mahal Palace Mumbai",
+            location:"mumbai",
+            rating:"9.4/10",
+            review:"Exceptional",
+            price:"$411",
+            image:"https://images.trvl-media.com/hotels/20000000/19460000/19458500/19458493/a7678da8.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            rooms:[{
+                roomName:"Luxury Grand Room City View King Bed",
+                size:"355 sq ft",
+                image:"https://images.trvl-media.com/hotels/20000000/19460000/19458500/19458493/3ea6ff30.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium",
+                price:"$411",
+            },{
+                roomName:"Luxury Room Palace Wing",
+                size:"398 sq ft",
+                image:"https://images.trvl-media.com/hotels/20000000/19460000/19458500/19458493/3ea6ff30.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium",
+                price:"$459", 
+            }, {
+                roomName:"Taj Club City View King Bed",
+                size:"388 sq ft",
+                image:"https://images.trvl-media.com/hotels/7000000/6160000/6152800/6152720/a0327df7.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium",
+                price:"$477",  
+            }],
+        },{
+            name:"Trident Bandra Kurla Mumbai",
+            location:"mumbai",
+            rating:"9.0/10",
+            review:"Exceptional",
+            price:"$186",
+            image:"https://images.trvl-media.com/hotels/2000000/1830000/1823800/1823707/2e002832.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            rooms:[{
+                roomName:"Deluxe Room",
+                size:"312 sq ft",
+                image:"https://images.trvl-media.com/hotels/2000000/1830000/1823800/1823707/6222c294.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium",
+                price:"$186",
+            },{
+                roomName:"Premier Room , 2 Twin Beds",
+                size:"344 sq ft",
+                image:"https://images.trvl-media.com/hotels/20000000/19460000/19458500/19458493/3ea6ff30.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium",
+                price:"$216", 
+            }, {
+                roomName:"Club Room , Twin Beds(Trident)",
+                size:"344 sq ft",
+                image:"https://images.trvl-media.com/hotels/2000000/1830000/1823800/1823707/47d19d2b.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium",
+                price:"$277",  
+            }],
+        },{
+            name:"Taj Santacruze",
+            location:"mumbai",
+            rating:"9.2/10",
+            review:"Exceptional",
+            price:"$181",
+            image:"https://images.trvl-media.com/hotels/12000000/11550000/11544400/11544400/1b5ae2e3.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            rooms:[{
+                roomName:"Luxury Room , 1 King Bed (Tranqulity)",
+                size:"480 sq ft",
+                image:"https://images.trvl-media.com/hotels/20000000/19460000/19458500/19458493/3ea6ff30.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium",
+                price:"$181",
+            },{
+                roomName:"Luxury Room, 2 Twin beds, City View",
+                size:"580 sq ft",
+                image:"https://images.trvl-media.com/hotels/12000000/11550000/11544400/11544400/1118084e.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium",
+                price:"$187", 
+            }, {
+                roomName:"Luxury Room , 2 Twin Beds (Runway View)",
+                size:"581 sq ft",
+                image:"https://images.trvl-media.com/hotels/12000000/11550000/11544400/11544400/47ffbea4.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium",
+                price:"$214",  
+            }],
+        },{
+            name:"The St.Regis Mumbai",
+            location:"mumbai",
+            rating:"9.2/10",
+            review:"WonderFul",
+            price:"$3388",
+            image:"https://images.trvl-media.com/hotels/6000000/5310000/5301700/5301691/796fe3c1.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            rooms:[{
+                roomName:"Room, 2 Twin Beds, City View",
+                size:"484 sq ft",
+                image:"https://images.trvl-media.com/hotels/6000000/5310000/5301700/5301691/fd88e6d4.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium",
+                price:"$338",
+            },{
+                roomName:"Room,2 Twin Beds (View, eco)",
+                size:"448 sq ft",
+                image:"https://images.trvl-media.com/hotels/6000000/5310000/5301700/5301691/a456f2de.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium",
+                price:"$350", 
+            }, {
+                roomName:"Suite , 1 King Bed (View, eco)",
+                size:"969 sq ft",
+                image:"https://images.trvl-media.com/hotels/6000000/5310000/5301700/5301691/c5a7a1ab.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium",
+                price:"$5,576",  
+            }],
+        },{
+            name:"The Orchid Hotel Mumbai Vile Parle",
+            location:"mumbai",
+            rating:"7.6/10",
+            review:"Good",
+            price:"$98",
+            image:"https://images.trvl-media.com/hotels/1000000/800000/793900/793877/4e265244.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            rooms:[{
+                roomName:"Deluxe Room City View Twin Bed With Bathtub",
+                size:"225sq ft",
+                image:"https://images.trvl-media.com/hotels/1000000/800000/793900/793877/4e265244.jpg?impolicy=resizecrop&rw=455&ra=fit",
+                price:"$85",
+            },{
+                roomName:"Executive Room with Separate Sitting Area, Bathtub",
+                size:"300 sq ft",
+                image:"https://images.trvl-media.com/hotels/1000000/800000/793900/793877/d7c1c70d.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium",
+                price:"$103", 
+            }, {
+                roomName:"Orchid Sutie with Living Room, Two Way Ariport Transfers, Happy Hours",
+                size:"500 sq ft",
+                image:"https://images.trvl-media.com/hotels/1000000/800000/793900/793877/1cd9e757.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium",
+                price:"$193",  
+            }],
+        },{
+            name:"Bawa International",
+            location:"mumbai",
+            rating:"7.2/10",
+            review:"Good",
+            price:"$66",
+            image:"https://images.trvl-media.com/hotels/2000000/1080000/1072800/1072789/c987ff4c.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            rooms:[{
+                roomName:"Executive Room",
+                size:"180sq ft",
+                image:"https://images.trvl-media.com/hotels/2000000/1080000/1072800/1072789/539a4be1.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium",
+                price:"$66",
+            },{
+                roomName:"Superior Executive Room",
+                size:"180 sq ft",
+                image:"https://images.trvl-media.com/hotels/2000000/1080000/1072800/1072789/f2653c50.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium",
+                price:"$72", 
+            }, {
+                roomName:"Delluxe Room",
+                size:"180 sq ft",
+                image:"https://images.trvl-media.com/hotels/2000000/1080000/1072800/1072789/24b27bc6.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium",
+                price:"$79",  
+            }],
+        },{
+            name:"The Ritz-Carlton,Pune",
+            location:"pune",
+            rating:"9.6/10",
+            review:"Good",
+            price:"$254",
+            image:"https://a.travel-assets.com/media/meso_cm/PAPI/Images/hotels/40000000/39460000/39453000/39452997/7fba7bc9_b.jpg",
+            rooms:[{
+                roomName:"Room , 1 King Bed Non Smoking, City View",
+                size:"560sq ft",
+                image:"https://images.trvl-media.com/hotels/40000000/39460000/39453000/39452997/74a5e76b.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium",
+                price:"$254",
+            },{
+                roomName:"Club Room,1 King Bed, Non Smoking, Golf View",
+                size:"302 sq ft",
+                image:"https://images.trvl-media.com/hotels/40000000/39460000/39453000/39452997/74a5e76b.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium",
+                price:"$302", 
+            }, {
+                roomName:"Premier Suite , 1 Bedroom , Non Smoking ",
+                size:"1100 sq ft",
+                image:"https://images.trvl-media.com/hotels/40000000/39460000/39453000/39452997/c2f39480.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium",
+                price:"$441",  
+            }],
+        },{
+            name:"Crowne Plaza Pune City Centre , am IHG Hotel",
+            location:"pune",
+            rating:"8.0/10",
+            review:"veryGood",
+            price:"$72",
+            image:"https://images.trvl-media.com/hotels/5000000/4520000/4517500/4517481/caea7d1e.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            rooms:[{
+                roomName:"Standard Room,2 Twin Beds Non Smoking",
+                size:"334sq ft",
+                image:"https://images.trvl-media.com/hotels/5000000/4520000/4517500/4517481/78b8e364.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium",
+                price:"$72",
+            },{
+                roomName:"Premium Room, 2 Twin Beds, Non Smoking",
+                size:"334 sq ft",
+                image:"https://images.trvl-media.com/hotels/5000000/4520000/4517500/4517481/78b8e364.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium",
+                price:"$90", 
+            }, {
+                roomName:"Premium Room ,1 King Bed , Non Smoking(High Floor)",
+                size:"334 sq ft",
+                image:"https://images.trvl-media.com/hotels/5000000/4520000/4517500/4517481/1604f8e2.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium",
+                price:"$90",  
+            }],
+        }
+
+        
+
+        
+        
+    ]
+
+ let value=locations[0].location
+                let neededData=  HotelsData.filter((Element,index)=>  (Element.location === value))
+                displayData(neededData)
+
+
+                
+    function displayData(data){
+        let cantainer= document.getElementById("continer")
+    // let Button = document.querySelector("#showData")
+    
+        cantainer.innerHTML=null;
+        console.log("i am samir");
+        data.forEach((element,index)=>{
+            let topContaner=document.createElement("div")
+               topContaner.setAttribute("id","topcontaner")
+               topContaner.setAttribute("href","./rooms.html")
+               topContaner.setAttribute("target","_black")
+               let imageDivContainer=document.createElement("div")
+             imageDivContainer.setAttribute("id" ,"imageDiv")
+             let image=document.createElement("img")
+             image.setAttribute("src",element.image)
+             let seconedDiv = document.createElement("div")
+             seconedDiv.setAttribute("id","content")
+               
+           
+             let name= document.createElement("h2")
+             name.textContent=element.name;
+            let location= document.createElement("h3")
+             location.textContent=element.location;
+             let rating = document.createElement("h4")
+             rating.textContent = element.rating;
+            let review = document.createElement("h5")
+             review.textContent=element.review;
+            let price = document.createElement("h4")
+             price.textContent = element.price
+            
+            topContaner.addEventListener("click",(el)=>{
+                // data.filter((element),=>{
+                      let roomData= JSON.parse(localStorage.getItem("roomData"))||[]
+                // })
+                for(let i=0; i<data[index].rooms.length; i++){
+                    console.log(data[index].rooms.length)
+                    roomData.push(data[index].rooms[i])
+                    if(roomData.length == 3){
+                        break;
+                    }
+                    // console.log(data[index].rooms[i])
+                }
+                        localStorage.setItem("roomData",JSON.stringify(roomData))
+
+                        location.href= "./reserve.html"
+                // location.href= "./rooms.html"
+                // location.href= "./rooms.html"
+                // console.log(data[index].rooms[index+1])
+            })
+            imageDivContainer.append(image)
+            seconedDiv .append(name,location,rating,review,price)
+            topContaner.append(imageDivContainer,seconedDiv)
+            cantainer.append(topContaner)
+           
+        })
+        
+    
+}
+</script>
 </html>

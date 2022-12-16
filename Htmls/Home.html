@@ -401,6 +401,10 @@ hr{
   margin-left: 10%;
         margin-top: 2%;
 }
+#ancher{
+  text-decoration: none;
+  color: white;
+}
  /* ----------------------------------------------------------------------------------------------------------------------------------------- */
 
  /* medium media query */
@@ -528,7 +532,7 @@ width: 80%;
             <ul>List Your Property</ul>
             <ul>Support</ul>
             <ul>Trips</ul>
-            <ul> <a href="./sign in.html" target="_blank">Sign in</a></ul>
+            <ul> <a href="./sign in.html" target="_blank" id="ancher">Sign in</a></ul>
         </div>
     </div>
 </div>
@@ -556,7 +560,7 @@ width: 80%;
           <div><input type="date" placeholder="check out" class="width"></div>
           <div><input type="number" placeholder="Travelers"></div>
       </div>
-      <button id="search" > Search</button>
+      <button id="search" ><a><span>Search</span></a> </button>
   </div>
  </div>
 
@@ -788,11 +792,29 @@ width: 80%;
 
   let searchButton= document.querySelector("#search")
     searchButton.addEventListener("click",() =>{
+      
+           let locations = JSON.parse(localStorage.getItem("location"))||[]
              if( typeof(userInput.value) === "string"){
-              location.href= "./Hotels.html"
-              
-             }
+              let obj={
+                location:userInput.value
+              };
+               
             
+              if(locations.length != 0){
+                for(let i=0; i<locations.length; i++){
+                  locations.pop()
+                }
+              }
+              locations.push(obj)
+                 
+                
+                
+             } 
+             localStorage.setItem("location",JSON.stringify(locations))
+             console.log(location)
+             
+             location.href= "./Hotels.html" 
     })
+    
 </script>
 </html>
