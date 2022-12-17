@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #navcontainer{
+            height: 5%;
+            width: 100%;
+            /* border: 5px solid red; */
+            background-color: #00253C;
+        }
+        #insideCont{
+            
+            width: 80%;
+            /* border: 5px solid green; */
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .content{
+            
+            width: 20%;
+            /* border: 4px solid black; */
+        }
+        #insideCont img{
+            
+            width: 100%;
+        }
+        #colour{
+            color: white;
+        }
+        #green{
+            color: blue;
+        }
+        #wholeContainer{
+            width: 80%;
+            /* border: 4px solid red; */
+            margin: auto;
+        }
+        #secure{
+            height: 10px;
+            width: 50%;
+            /* border: 4px solid blue; */
+            display: inline;
+            
+            font-size: 35px;
+            margin-bottom: -20%;
+        }
+        #justbelow{
+            height:20% ;
+            width: 100%;
+            /* border: 4px solid red; */
+            display: flex;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        #image{
+            height: 80%;
+            width: 8%;
+            /* border: 5px solid blue; */
+        }
+        #image img{
+            width: 100%;
+        }
+        #side{
+            height: 100%;
+            width: 80%;
+            /* border: 4px solid green; */
+        }
+        #side>div{
+            height: 20%;
+            width: 70%;
+            /* border: 4px solid black; */
+            /* margin-bottom: -5%; */
+        }
+        #side h3{
+            display: inline;
+            
+        }
+        #sign{
+            margin-top: 2%;
+            height:20% ;
+            width: 100%;
+            /* border: 4px solid red; */
+            display: flex;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        #lock {
+            height: 50%;
+            width: 8%;
+            /* border: 4px solid blue; */
+        }
+        #lock img{
+            height: 50%;
+            width: 100%;
+        }
+        #payment{
+            height: 40%;
+            width: 40%;
+            border: 4px solid black;
+            margin-top: 4%;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        #method{
+            height: 10%;
+            width: 80%;
+            /* border: 4px solid blue; */
+            margin: auto;
+            font-size: 20px;
+        }
+        #imgcard{
+            height:10% ;
+            width: 80%;
+            /* border: 2px solid red; */
+            margin: auto;
+        }
+        #cardpicture{
+            height: 10%;
+            width: 80%;
+            border: 3px solid blueviolet;
+            display: flex;
+        }
+        #cardpicture div{
+            height: 90%;
+            width: 50%;
+        }
+        #cardpicture img{
+            width: 100%;
+        }
+        
+        /* #secure div{
+            height: 10%;
+            width: 50%;
+            border: 4px solid black;
+            
+        } */
+        /* #secure>div h2{
+            
+            border: 4px solid red;
+        } */
+
+    </style>
+</head>
+<body>
+    <div id="navcontainer">
+        <div id="insideCont">
+            <div class="content">
+                <img src="https://www.orbitz.com/_dms/header/logo.svg?locale=en_US&siteid=70201" alt="">
+            </div>
+            <div class="content">
+                <div>
+                    <h4 id="colour">Orbucks</h4>
+                </div>
+            </div>
+            <div class="content">
+                <h3 id="green">Hello</h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="wholeContainer">
+       
+        
+                <h2 id="secure">Secure booking - only takes 2 minutes!</h2>
+            <div id="justbelow">
+                <div id="image">
+                    <img src="https://www.shutterstock.com/image-vector/safe-icon-vector-trendy-flat-600w-742697569.jpg" alt="error">
+                </div>
+                <div id="side">
+                    <div><h5>Fully refundable before Fri,</h5></div>
+                    <div><h5>You can Change this stay if plans change, Because flexibility matters</h5></div>
+                </div>
+            </div>
+
+
+               <div id="sign">
+                <div id="lock">
+                    <img src="https://www.shutterstock.com/image-vector/blue-lock-icon-vector-600w-259385927.jpg" alt="">
+
+                </div>
+                <div>
+                    <h4>Signed in as</h4>
+                    <h3>samirshinde011@gmail.com</h3>
+                </div>
+               </div>
+               <div id="payment">
+                <div id="method">
+                    Payment method
+                </div>
+                <div id="imgcard">
+                    <div id="cardpicture">
+                        <div><img src="https://a.travel-assets.com/dms-svg/payments/cards-cc_master_card.svg" alt="error"></div>
+                        <div><img src="https://a.travel-assets.com/dms-svg/payments/cards-cc_american_express.svg" alt="error"></div>
+                        <div><img src="https://a.travel-assets.com/dms-svg/payments/cards-cvv_amex.svg" alt="error"></div>
+                    </div>
+                    <div id="main">
+                        <div>Name on Card</div>
+                        <input type="text" id="name" placeholder="name on the cards">
+                        <div>Debit/Credit Card number</div>
+                        <input type="text" id="cardnumber">      <div id="expiration">
+                            <div>Expiration date</div>
+                            <input type="number" name="" id="number" placeholder="month">
+                            <input type="number" id="month" placeholder="year">
+                        </div>
+                        <div id="security">
+                            <div>Security code</div>
+                            <input type="number">
+                        </div>
+                        <button id="booking">Complete Booking</button>
+                    </div>
+                </div>
+               </div>
+    </div>
+</body>
+<script>
+    let booking=document.getElementById("booking")
+    booking.addEventListener("click",()=>{
+        alert("Your booking is successfull")
+        location.href="./Home.html"
+    })
+</script>
+</html>

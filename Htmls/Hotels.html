@@ -103,6 +103,13 @@
   text-decoration: none;
   color: white;
 }
+#button{
+    height: 10%;
+    width: 20%;
+    border: 2px solid green;
+    margin-bottom: 500%;
+    margin-left: 30%;
+}
     </style>
 </head>
 <body>
@@ -421,15 +428,24 @@
         data.forEach((element,index)=>{
             let topContaner=document.createElement("div")
                topContaner.setAttribute("id","topcontaner")
-               topContaner.setAttribute("href","./rooms.html")
+            //    topContaner.setAttribute("href","./reserve.html")
                topContaner.setAttribute("target","_black")
                let imageDivContainer=document.createElement("div")
              imageDivContainer.setAttribute("id" ,"imageDiv")
              let image=document.createElement("img")
              image.setAttribute("src",element.image)
              let seconedDiv = document.createElement("div")
+
              seconedDiv.setAttribute("id","content")
-               
+               seconedDiv.addEventListener("click",()=>{
+                window.location.href = "./reserve.html";
+                // location.href="./payment.html"
+                //     //    location.href="./reserve.html"
+                //        console.log("i am fine")
+                // location.href= "./rooms.html"
+                // location.href= "./rooms.html"
+                // console.log(data[index].rooms[index+1])
+               })
            
              let name= document.createElement("h2")
              name.textContent=element.name;
@@ -441,10 +457,14 @@
              review.textContent=element.review;
             let price = document.createElement("h4")
              price.textContent = element.price
+            //  let button = document.createElement("button")
+            //  button.setAttribute("id","button")
+            //  button.textContent="Look Rooms"
             
             topContaner.addEventListener("click",(el)=>{
                 // data.filter((element),=>{
                       let roomData= JSON.parse(localStorage.getItem("roomData"))||[]
+                      
                 // })
                 for(let i=0; i<data[index].rooms.length; i++){
                     console.log(data[index].rooms.length)
@@ -455,11 +475,8 @@
                     // console.log(data[index].rooms[i])
                 }
                         localStorage.setItem("roomData",JSON.stringify(roomData))
-
-                        location.href= "./reserve.html"
-                // location.href= "./rooms.html"
-                // location.href= "./rooms.html"
-                // console.log(data[index].rooms[index+1])
+                         
+                       location.href="./reserve.html"
             })
             imageDivContainer.append(image)
             seconedDiv .append(name,location,rating,review,price)
