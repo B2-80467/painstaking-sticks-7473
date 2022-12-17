@@ -63,20 +63,26 @@
         #container{
             height: 50%;
             width: 60%;
-            border: 4px solid red;
+            /* border: 4px solid red; */
             margin: auto;
             display: grid;
             grid-template-columns: repeat(3,1fr);
-            margin-top: 15%;
+            margin-top: 10%;
         }
         #topcontaner{
             width: 90%;
             height: 100%;
-            border: 4px solid blue;
+            border: 1px solid blueviolet;
         }
         #topcontaner img{
             height: 40%;
             width: 100%;
+        }
+        #button{
+            height: 10%;
+            width: 30%;
+            background-color: red;
+            color: white;
         }
     </style>
 </head>
@@ -147,6 +153,12 @@ roomData= JSON.parse(localStorage.getItem("roomData"))||[]
             
             let price = document.createElement("h4")
              price.textContent = element.price
+             let button = document.createElement("button")
+             button.setAttribute("id","button")
+             button.textContent= "Reserve"
+             button.addEventListener("click",()=>{
+                  location.href="./payment.html"
+             })
             //  let button = document.createElement("button")
             
             // topContaner.addEventListener("click",()=>{
@@ -168,7 +180,7 @@ roomData= JSON.parse(localStorage.getItem("roomData"))||[]
             // })
         
             
-            card.append(image,roomName,size,price)
+            card.append(image,roomName,size,price,button)
             cantainer.append(card)
         })
         
